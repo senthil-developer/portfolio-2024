@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+}
+.scroll-x {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.glass-blur {
+  @apply after:absolute after:inset-0 after:-z-[1] after:size-full  after:bg-[rgba(255,255,255,0.1)] after:backdrop-blur-[1px];
+}
