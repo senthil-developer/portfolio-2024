@@ -8,7 +8,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
 export function Button({
   borderRadius = "1.75rem",
@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative   overflow-hidden bg-transparent p-[1px] text-xl ",
+        "relative overflow-hidden bg-transparent p-[1px] text-xl",
         containerClassName,
       )}
       style={{
@@ -47,7 +47,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20  bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]  opacity-[1]",
+              "h-20 w-20 bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)] opacity-[1]",
               borderClassName,
             )}
           />

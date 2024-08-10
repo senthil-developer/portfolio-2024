@@ -26,7 +26,7 @@ export default function DarkModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="bg-black/80 text-white dark:bg-white/80 dark:text-black"
+        className="divide-y-2 divide-green-400 bg-black/80 text-white *:cursor-pointer dark:bg-white/80 dark:text-black"
       >
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light

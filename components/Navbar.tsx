@@ -30,20 +30,20 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="fixed top-0 z-50 flex h-[5vh]  w-full max-w-7xl items-center gap-5  backdrop-blur">
+    <div className="fixed top-0 z-30 flex h-[5vh] w-full max-w-7xl items-center gap-5 backdrop-blur">
       {/* Logo */}
       <Link
         href="/"
         className="flex items-center justify-center rounded-md p-1 text-sm font-semibold"
       >
         <span className="mr-1 text-black dark:text-white">Senthil</span>
-        <span className="flex h-8 w-12 items-center justify-center rounded bg-black text-white transition-all dark:bg-white  dark:text-black  ">
+        <span className="flex h-8 w-12 items-center justify-center rounded bg-black text-white transition-all dark:bg-white dark:text-black">
           .dev
         </span>
       </Link>
 
       {/* Web Navbar */}
-      <div className="hidden  w-full items-center justify-between gap-5 md:flex">
+      <div className="hidden w-full items-center justify-between gap-5 md:flex">
         <div className="flex gap-5">
           {link.map((item, index) => (
             <Link
@@ -51,16 +51,15 @@ export const Navbar = () => {
               key={index}
               className={`group flex flex-col ${
                 item.link.slice(1) === url &&
-                "rounded-md bg-yellow-300 px-2 text-black hover:bg-yellow-300/80 hover:transition-all hover:duration-300"
+                "rounded-md bg-green-300 px-2 text-black hover:bg-green-400/80 hover:transition-all hover:duration-300"
               }`}
             >
               {item.name}
               <span
                 className={`${
                   item.link.slice(1) !== url &&
-                  "w-[20%] rounded-2xl border-b-4 border-black duration-300 group-hover:w-[80%] dark:border-white"
-                }
-              `}
+                  "w-[20%] rounded-2xl border-b-4 border-green-400 duration-300 group-hover:w-[80%]"
+                } `}
               ></span>
             </Link>
           ))}

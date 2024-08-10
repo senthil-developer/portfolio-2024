@@ -20,11 +20,15 @@ oAuth2Client.setCredentials({
   refresh_token: refreshToken,
 });
 
-export async function sendMail(formData: FormData) {
+type Data = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+export async function sendMail(data: Data) {
   try {
-    const name = formData.get("user_name") as string;
-    const email = formData.get("user_email") as string;
-    const message = formData.get("message") as string;
+    const { name, email, message } = data;
     const accessToken = (await oAuth2Client.getAccessToken()) as string;
 
     const transporter = nodemailer.createTransport({
@@ -42,11 +46,12 @@ export async function sendMail(formData: FormData) {
     const template = `
   <html>
   <body>
-  <h2>Contact Form Submission</h2>
-  <h1><strong>Name :</strong> ${name.toUpperCase()}</h1>
+  <h2>Client mailed</h2>
+  <h3><strong>Name :</strong> ${name.toUpperCase()}</h3>
   <p><strong>Email :</strong> ${email}</p>
-  <p><strong>Message :</strong></p>
-  <p>${message}</p>
+  <p><strong>Message :</strong>
+  <span>${message}</span>
+  </p>
   </body>
   </html>
   `;
@@ -56,10 +61,15 @@ export async function sendMail(formData: FormData) {
       subject: "Mail from User",
       html: template,
     };
-
-    const send = await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully", send);
+    await transporter.sendMail(mailOptions);
+    return {
+      success: true,
+      message: "Email sent successfully",
+    };
   } catch (error) {
-    return "error while sending mail";
+    return {
+      success: false,
+      message: "Failed to send email",
+    };
   }
 }

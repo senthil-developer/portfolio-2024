@@ -2,17 +2,17 @@
 
 import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
-import PLaceHolderComponent from "./PLaceHolderComponent";
-import { StaticImageData } from "next/image";
+import { motion } from "framer-motion-3d";
+import { useState } from "react";
 
 const Ball = ({ url }: { url: string }) => {
   const [decal] = useTexture([url]);
   const { viewport } = useThree();
   return (
     <Float speed={3} rotationIntensity={1} floatIntensity={0}>
-      <ambientLight intensity={0.25} />
-      <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={viewport.width / 3}>
+        <ambientLight intensity={0.25} />
+        <directionalLight position={[0, 0, 0.05]} />
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
@@ -32,19 +32,26 @@ const Ball = ({ url }: { url: string }) => {
 };
 
 const Skill = ({ url }: { url: string }) => {
+  const [hovered, setHovered] = useState(false);
   return (
-    <Canvas
-      frameloop="always"
-      gl={{ preserveDrawingBuffer: true }}
-      style={{ width: "100%", height: "100%" }}
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        cursor: hovered ? "pointer" : "auto",
+      }}
+      onPointerOver={() => setHovered(true)}
+      onPointerOut={() => setHovered(false)}
     >
-      <OrbitControls
-        enableZoom={false}
-        enableDamping={false}
-        enablePan={false}
-      />
-      <Ball url={url} />
-    </Canvas>
+      <Canvas frameloop="always" style={{ width: "100%", height: "100%" }}>
+        <OrbitControls
+          enableZoom={false}
+          enableDamping={false}
+          enablePan={false}
+        />
+        <Ball url={url} />
+      </Canvas>
+    </div>
   );
 };
 export default Skill;

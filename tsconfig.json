@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/test.lsx"
+    "components/test.lsx",
+    "app/projects/util.js"
   ],
   "exclude": ["node_modules"]
 }

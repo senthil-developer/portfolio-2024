@@ -5,11 +5,9 @@ import SocialLinks from "@/links.json";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils";
 
-type Props = {};
-
-const MobileNav = (props: Props) => {
+const MobileNav = () => {
   const path = usePathname();
   const link = SocialLinks.links;
 
@@ -68,7 +66,7 @@ const MobileNav = (props: Props) => {
   return (
     <>
       <button
-        className="relative z-[1] flex h-8 w-9 flex-col justify-between "
+        className="relative z-[1] flex h-8 w-9 flex-col justify-between"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <motion.div
@@ -99,7 +97,7 @@ const MobileNav = (props: Props) => {
           variants={listVariants}
           initial="closed"
           animate="opened"
-          className="absolute left-0 top-0 flex h-screen  w-screen flex-col items-center justify-center gap-8 bg-white text-4xl dark:bg-black"
+          className="absolute left-0 top-0 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-white text-4xl dark:bg-black"
         >
           {link.map((item) => (
             <motion.div
@@ -113,7 +111,7 @@ const MobileNav = (props: Props) => {
               <Link
                 href={item.link}
                 className={cn(
-                  "hover:text-opacity-65 ",
+                  "hover:text-opacity-65",
                   path === item.link &&
                     "text-orange-500 hover:text-opacity-100",
                 )}

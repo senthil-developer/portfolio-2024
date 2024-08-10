@@ -1,19 +1,16 @@
 "use client";
 
 import React, { useRef } from "react";
+
 import { useTexture } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import {
-  BufferGeometry,
-  Material,
-  Mesh,
-  MeshStandardMaterial,
-  NormalBufferAttributes,
-  Object3DEventMap,
-} from "three";
+import { BufferGeometry, Material, Mesh, Object3DEventMap } from "three";
+
+type ModelProps = JSX.IntrinsicElements["mesh"];
 
 const EarthTexture = "/earth-texture-nightmap.jpg";
-export default function Model(props: any) {
+
+export default function Model(props: ModelProps) {
   const texture = useTexture(EarthTexture);
   const sun = useRef<Mesh<
     BufferGeometry,
