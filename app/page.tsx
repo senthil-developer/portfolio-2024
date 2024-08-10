@@ -40,7 +40,7 @@ export default async function Home() {
 
           {/* BUTTONS */}
           <div className="flex w-full gap-4">
-            <LinkButton link="/project" title="View My Work" />
+            <LinkButton link="/projects" title="View My Work" />
             <LinkButton link="/contact" title="Contact Me" />
           </div>
         </div>
