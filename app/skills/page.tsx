@@ -13,7 +13,7 @@ import threeJs from "@/public/skill/threeJs.png";
 import ts from "@/public/skill/ts.png";
 import tailwind from "@/public/skill/tailwind.png";
 import git from "@/public/skill/git.png";
-import nodeJs from "@/public/skill/nodeJs.png";
+import nodeJs from "@/public/skill/nodeJS.png";
 import mongoDB from "@/public/skill/mongoDB.png";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ const SkillsPage = () => {
     { icon: "/skill/nextJs.png", name: "Next Js", placeholder: nextJs },
     { icon: "/skill/reactJs.png", name: "React JS", placeholder: react },
     { icon: "/skill/threeJs.png", name: "Three Js", placeholder: threeJs },
-    { icon: "/skill/nodeJs.png", name: "Node Js", placeholder: nodeJs },
+    { icon: "/skill/nodeJS.png", name: "Node Js", placeholder: nodeJs },
     { icon: "/skill/mongoDB.png", name: "Mongo DB", placeholder: mongoDB },
     { icon: "/skill/zustand.png", name: "Zustand", placeholder: zustand },
     { icon: "/skill/blender.png", name: "Blender", placeholder: blender },
