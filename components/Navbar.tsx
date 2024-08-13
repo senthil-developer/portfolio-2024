@@ -30,7 +30,7 @@ export const Navbar = () => {
   ];
 
   return (
-    <div className="fixed top-0 z-30 flex h-[5vh] w-full max-w-7xl items-center gap-5 backdrop-blur">
+    <div className="fixed top-0 z-[100] flex h-[5vh] w-full max-w-7xl items-center gap-5 backdrop-blur">
       {/* Logo */}
       <Link
         href="/"
