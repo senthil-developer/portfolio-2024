@@ -8,11 +8,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio using next js",
-  // icons: {
-  //   icon: "",
-  // },
+  title: {
+    default: "Portfolio",
+    template: "%s | Portfolio",
+  },
+  description:
+    "Showcasing my projects and skills in web development using Next.js, React, and more.",
 };
 
 export default function RootLayout({

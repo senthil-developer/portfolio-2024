@@ -20,7 +20,6 @@ import mongoDB from "@/public/skill/mongoDB.png";
 
 export const metadata: Metadata = {
   title: "Skills",
-  description: "Skills Page",
 };
 
 const SkillsPage = () => {

@@ -26,26 +26,25 @@ export default async function Home() {
         </div>
 
         {/* TEXT CONTAINER */}
-        <div className="flex flex-col justify-center gap-8 lg:h-full lg:w-1/2">
+        <div className="flex flex-col justify-center gap-8 max-lg:px-4 lg:h-full lg:w-1/2">
           {/* TITLE */}
           <h1 className="text-4xl font-bold md:text-6xl">Hi,</h1>
           {/* DESC */}
           <p className="md:text-xl">
-            Welcome to my digital portfolio, where frontend innovation meets
-            elegant design. With a strong foundation in crafting intuitive user
-            interfaces and a deep understanding of modern web technologies, my
-            work exemplifies a commitment to delivering exceptional user
-            experiences. Explore my projects to see how I blend creativity with
-            technical prowess to bring captivating and functional digital
-            experiences to life.
+            Recent graduate with expertise in React, TypeScript, and Next.js,
+            along with hands-on experience in Three.js for 3D graphics.
+            Proficient in Sass, Bootstrap, Tailwind CSS, and GSAP for styling
+            and animations. Passionate about crafting engaging web experiences
+            and eager to apply my skills to innovative front-end and full-stack
+            projects.
           </p>
 
           {/* BUTTONS */}
           <div className="flex w-full gap-4">
             <LinkButton
-              link="/linkedin.png"
+              link="/senthil-resume.pdf"
               title="Resume"
-              download="senthil-resume.png"
+              download="senthil-resume.pdf"
             />
             <LinkButton link="/contact" title="Contact Me" />
           </div>

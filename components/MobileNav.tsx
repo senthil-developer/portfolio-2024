@@ -112,8 +112,7 @@ const MobileNav = () => {
                 href={item.link}
                 className={cn(
                   "hover:text-opacity-65",
-                  path === item.link &&
-                    "text-orange-500 hover:text-opacity-100",
+                  path === item.link && "text-green-400 hover:text-opacity-100",
                 )}
               >
                 {item.name}
