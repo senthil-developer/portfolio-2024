@@ -10,9 +10,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Portfolio using next js",
-  icons: {
-    icon: "/instagram.png",
-  },
+  // icons: {
+  //   icon: "",
+  // },
 };
 
 export default function RootLayout({

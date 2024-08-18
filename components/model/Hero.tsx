@@ -12,8 +12,6 @@ import {
   Object3DEventMap,
 } from "three";
 
-import { useControls } from "leva";
-
 export default function Model() {
   const { nodes } = useGLTF("/models/torrus.glb");
   const { viewport } = useThree();
@@ -43,7 +41,7 @@ export default function Model() {
     <group scale={viewport.width / 4}>
       <Text
         fontSize={0.9}
-        font="/fonts/Lostar.ttf"
+        font={"/fonts/Lostar.ttf"}
         position={[0, 0, -0.5]}
         color={0xff50ff}
         anchorX="center"

@@ -65,7 +65,7 @@ export const Project = () => {
         >
           {projects.map((project, index) => (
             <div
-              className="flex h-[80vh] w-[90%] shrink-0 flex-col overflow-hidden rounded-md bg-[linear-gradient(to_right_top,#d16ba5,#c777b9,#ba83ca,#aa8fd8,#9a9ae1,#8aa7ec,#79b3f4,#69bff8,#52cffe,#41dfff,#46eefa,#5ffbf1)] bg-cover p-4 max-md:justify-center md:flex-row md:items-center"
+              className="relative z-10 flex h-[80vh] w-[90%] shrink-0 flex-col overflow-hidden rounded-md p-4 before:absolute before:inset-0 before:-z-10 before:size-full before:bg-[linear-gradient(to_right_top,#d16ba5,#c777b9,#ba83ca,#aa8fd8,#9a9ae1,#8aa7ec,#79b3f4,#69bff8,#52cffe,#41dfff,#46eefa,#5ffbf1)] before:blur max-md:justify-center md:flex-row md:items-center"
               key={index}
             >
               <div className="flex h-[60%] w-full flex-col justify-between gap-6 py-4 text-base md:w-[40%]">

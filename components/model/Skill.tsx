@@ -1,9 +1,15 @@
 "use client";
 
-import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  useTexture,
+  Preload,
+} from "@react-three/drei";
 import { Canvas, useThree } from "@react-three/fiber";
-import { motion } from "framer-motion-3d";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import CanvasLoader from "../CanvasLoader";
 
 const Ball = ({ url }: { url: string }) => {
   const [decal] = useTexture([url]);
@@ -44,12 +50,15 @@ const Skill = ({ url }: { url: string }) => {
       onPointerOut={() => setHovered(false)}
     >
       <Canvas frameloop="always" style={{ width: "100%", height: "100%" }}>
-        <OrbitControls
-          enableZoom={false}
-          enableDamping={false}
-          enablePan={false}
-        />
-        <Ball url={url} />
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            enableDamping={false}
+            enablePan={false}
+          />
+          <Ball url={url} />
+        </Suspense>
+        <Preload all />
       </Canvas>
     </div>
   );

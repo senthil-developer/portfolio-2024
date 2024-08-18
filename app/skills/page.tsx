@@ -12,48 +12,55 @@ import blender from "@/public/skill/blender.png";
 import threeJs from "@/public/skill/threeJs.png";
 import ts from "@/public/skill/ts.png";
 import tailwind from "@/public/skill/tailwind.png";
+import sass from "@/public/skill/sass.png";
+import bootstrap from "@/public/skill/bootstrap.png";
 import git from "@/public/skill/git.png";
 import nodeJs from "@/public/skill/nodeJS.png";
 import mongoDB from "@/public/skill/mongoDB.png";
 
 export const metadata: Metadata = {
   title: "Skills",
-  description: "SkillsPage",
-  icons: {
-    icon: "/next.svg",
-  },
+  description: "Skills Page",
 };
 
 const SkillsPage = () => {
-  const Skill = dynamic(() => import("@/components/Skill"), { ssr: false });
+  const Skill = dynamic(() => import("@/components/model/Skill"), {
+    ssr: false,
+  });
 
   const skills = [
-    { icon: "/skill/html.png", name: "HTML", placeholder: html },
-    { icon: "/skill/css.png", name: "CSS", placeholder: css },
-    { icon: "/skill/tailwind.png", name: "Tailwind", placeholder: tailwind },
-    { icon: "/skill/js.png", name: "JavaScript", placeholder: js },
-    { icon: "/skill/ts.png", name: "TypeScript", placeholder: ts },
-    { icon: "/skill/nextJs.png", name: "Next Js", placeholder: nextJs },
-    { icon: "/skill/reactJs.png", name: "React JS", placeholder: react },
-    { icon: "/skill/threeJs.png", name: "Three Js", placeholder: threeJs },
-    { icon: "/skill/nodeJS.png", name: "Node Js", placeholder: nodeJs },
-    { icon: "/skill/mongoDB.png", name: "Mongo DB", placeholder: mongoDB },
-    { icon: "/skill/zustand.png", name: "Zustand", placeholder: zustand },
-    { icon: "/skill/blender.png", name: "Blender", placeholder: blender },
-    { icon: "/skill/git.png", name: "Git", placeholder: git },
+    { icon: "/skill/html.png", name: "HTML" },
+    { icon: "/skill/css.png", name: "CSS" },
+    {
+      icon: "/skill/tailwind.png",
+      name: "Tailwind css",
+    },
+    { icon: "/skill/sass.png", name: "Sass" },
+    { icon: "/skill/bootstrap.png", name: "Bootstrap" },
+    { icon: "/skill/js.png", name: "JavaScript" },
+    { icon: "/skill/ts.png", name: "TypeScript" },
+    { icon: "/skill/nextJs.png", name: "Next Js" },
+    { icon: "/skill/reactJs.png", name: "React JS" },
+    { icon: "/skill/threeJs.png", name: "Three Js" },
+    { icon: "/skill/nodeJS.png", name: "Node Js" },
+    { icon: "/skill/mongoDB.png", name: "Mongo DB" },
+    { icon: "/skill/zustand.png", name: "Zustand" },
+    { icon: "/skill/blender.png", name: "Blender" },
+    { icon: "/skill/git.png", name: "Git" },
   ];
   return (
     <div className="flex h-full w-full flex-col gap-2">
       <h1 className="title">Skills</h1>
+
       <div className="flex flex-row flex-wrap justify-center gap-10">
-        {skills.map((skill, i) => {
+        {skills.map((skill) => {
           return (
             <BackgroundGradient
-              key={i}
-              className="z-50 flex h-fit w-[200px] flex-col gap-3 rounded-[22px] bg-zinc-950 p-4 text-center"
+              key={skill.name}
+              className="flex h-fit w-[200px] flex-col gap-3 rounded-[22px] bg-zinc-950 p-4 text-center"
               animate={true}
             >
-              <Skill url={skill.icon} />
+              <Skill url={skill.icon} key={skill.name} />
               <div className="select-none text-lg text-white">
                 <h3>{skill.name}</h3>
               </div>

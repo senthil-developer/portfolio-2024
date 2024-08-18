@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { Project } from "./Project";
+
+export const metadata: Metadata = {
+  title: "Project",
+  description: "Project Page",
+};
 
 const Page = () => {
   return (
