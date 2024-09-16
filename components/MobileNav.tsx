@@ -66,7 +66,7 @@ const MobileNav = () => {
   return (
     <>
       <button
-        className="relative z-[1] flex h-8 w-9 flex-col justify-between"
+        className="relative z-[11] flex h-8 w-9 flex-col justify-between"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <motion.div
