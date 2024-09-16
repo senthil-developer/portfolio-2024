@@ -65,7 +65,7 @@ const LinkButton = ({
 }) => {
   return (
     <a href={link} download={download}>
-      <button className="rounded-full bg-black p-4 text-white dark:bg-white dark:text-black">
+      <button className="rounded-full bg-black p-1 px-2 text-white dark:bg-white dark:text-black">
         {title}
       </button>
     </a>
