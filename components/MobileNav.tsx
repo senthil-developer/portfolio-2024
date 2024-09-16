@@ -97,7 +97,7 @@ const MobileNav = () => {
           variants={listVariants}
           initial="closed"
           animate="opened"
-          className="absolute left-0 top-0 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-white text-4xl dark:bg-black"
+          className="absolute left-0 top-0 flex h-screen w-screen flex-col items-center justify-center gap-8 bg-white text-4xl dark:bg-black z-[10]"
         >
           {link.map((item) => (
             <motion.div
