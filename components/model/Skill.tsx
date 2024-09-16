@@ -49,7 +49,7 @@ const Skill = ({ url }: { url: string }) => {
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
-      <Canvas frameloop="always" style={{ width: "100%", height: "100%" }}>
+      <Canvas frameloop="always" style={{ width: "100%", height: "100%" }} class Name={'z-[5]'}>
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
             enableZoom={false}
