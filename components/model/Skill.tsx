@@ -45,6 +45,7 @@ const Skill = ({ url }: { url: string }) => {
         width: "100%",
         height: "100%",
         cursor: hovered ? "pointer" : "auto",
+        zIndex:5,
       }}
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
