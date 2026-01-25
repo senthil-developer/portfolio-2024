@@ -12,6 +12,7 @@ const ContactPage = () => {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<UserFormValues>({
     defaultValues: { name: "", email: "", message: "" },
     resolver: zodResolver(userSchema),
@@ -19,13 +20,15 @@ const ContactPage = () => {
 
   const onSubmit = async (data: UserFormValues) => {
     try {
-      const res = await sendEmail(data as any);
+      const res = await sendEmail(data);
       if (res.success) {
         toast.success("Message sent successfully!");
+        reset();
       } else {
-        toast.error("Failed to send message");
+        toast.error(res?.message || "Failed to send message");
       }
     } catch (error) {
+      console.log({ error });
       toast.error("Failed to send message");
     }
   };
@@ -47,7 +50,7 @@ const ContactPage = () => {
               Submit the form below or send me an{" "}
               <a
                 className="inline-block bg-gradient-to-r from-[#D9AFD9] to-[#97D9E1] bg-clip-text font-semibold text-transparent"
-                href="mailto:senthildeveloper4@gmail.com"
+                href={`mailto:${process.env.NEXT_PUBLIC_AUTHOR_EMAIL}`}
               >
                 email
               </a>

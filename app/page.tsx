@@ -33,13 +33,14 @@ export default async function Home() {
           <h1 className="text-4xl font-bold md:text-6xl">Hi,</h1>
           {/* DESC */}
           <p className="md:text-xl">
-            I’m a frontend-focused full-stack developer with 1.2 years of
-            experience building fast, interactive, and visually rich web
-            applications. I work extensively with React, Next.js, Vue, and
-            TypeScript, and I specialize in crafting smooth UI and 3D
-            experiences using Three.js, React Three Fiber, GSAP, and Framer
-            Motion. I’m passionate about performance, clean engineering, and
-            building engaging digital experiences end-to-end.
+            Software Engineer with 1.4 years of experience building
+            high-performance, scalable web applications. Strong background in
+            React, Next.js, and TypeScript, with hands-on experience optimizing
+            large, data-intensive UIs and designing secure backend services.
+            Proven ability to architect reliable data flows, improve performance
+            at scale, and deliver production-ready solutions using Node.js, AWS,
+            DynamoDB, and PostgreSQL. Passionate about clean engineering, system
+            design, and building maintainable, user-centric products.
           </p>
 
           {/* BUTTONS */}
