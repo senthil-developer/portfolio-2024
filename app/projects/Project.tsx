@@ -148,7 +148,7 @@ const projects: projectProps[] = [
     title: "Movie Universe",
     description:
       "A comprehensive movie database app providing detailed information about movies, actors, and directors, similar to IMDb.",
-    githubLink: "https://github.com/senthil-developer/movies",
+    githubLink: "https://github.com/senthil-developer/movie",
     websiteLink: "https://movie-universe-nextjs.netlify.app",
     img: "/project/movie-universe.jpg",
     techStack: ["Next.js", "Framer Motion"],

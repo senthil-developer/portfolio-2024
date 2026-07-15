@@ -33,14 +33,12 @@ export default async function Home() {
           <h1 className="text-4xl font-bold md:text-6xl">Hi,</h1>
           {/* DESC */}
           <p className="md:text-xl">
-            Software Engineer with 1.4 years of experience building
-            high-performance, scalable web applications. Strong background in
-            React, Next.js, and TypeScript, with hands-on experience optimizing
-            large, data-intensive UIs and designing secure backend services.
-            Proven ability to architect reliable data flows, improve performance
-            at scale, and deliver production-ready solutions using Node.js, AWS,
-            DynamoDB, and PostgreSQL. Passionate about clean engineering, system
-            design, and building maintainable, user-centric products.
+            Software Engineer with 1.8 years of experience building scalable web applications and enterprise software across
+            frontend and backend systems. Experienced in developing high-performance React and Next.js applications,
+            architecting secure APIs with Node.js and AWS serverless services, and optimizing large-scale data-intensive
+            interfaces handling thousands of records. Skilled in TypeScript, PostgreSQL, DynamoDB, Docker, and modern cloud-
+            native development, with a strong focus on performance, scalability, maintainable architecture, and delivering
+            production-ready software for enterprise clients.
           </p>
 
           {/* BUTTONS */}
